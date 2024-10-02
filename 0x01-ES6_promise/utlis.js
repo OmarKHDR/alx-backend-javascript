@@ -11,3 +11,4 @@ export function createUser() {
     lastName: 'Salva',
   });
 }
+

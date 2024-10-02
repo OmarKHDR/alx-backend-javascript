@@ -1,14 +1,15 @@
 import { uploadPhoto, createUser } from './utlis';
 
 export default function handleProfileSignup() {
-  let body;
-  let firstName;
-  let lastName;
-  async function name() {
-    body = await uploadPhoto().then((res) => res.body);
-    firstName = await createUser().then((res) => res.firstName);
-    lastName = await createUser().then((res) => res.lastName);
-    console.log(body, firstName, lastName);
+  async function hi() {
+    try {
+      const body = await uploadPhoto()
+        .then((res) => res.body);
+      const { firstName, lastName } = await createUser();
+      console.log(body, firstName, lastName);
+    } catch (err) {
+      console.log('Signup system offline');
+    }
   }
-  name();
+  hi();
 }
