@@ -10,7 +10,7 @@ export default class Currency {
 
   set code(cd) {
     if (typeof cd !== 'string') {
-      throw new TypeError('code must be a character');
+      throw new TypeError('code must be a string');
     }
     this._code = cd;
   }
@@ -27,6 +27,6 @@ export default class Currency {
   }
 
   displayFullCurrency() {
-	return `${this.name} (${this.code})`;
+    return `${this.name} (${this.code})`;
   }
 }
