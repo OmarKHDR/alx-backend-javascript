@@ -2,9 +2,9 @@
 
 const app = require('node:http');
 
-module.exports = app
+module.exports = app;
 
 app.createServer((req, res) => {
-	res.write('Hello Holberton School!');
-	res.end()
+  res.write('Hello Holberton School!');
+  res.end();
 }).listen(1245);
