@@ -10,7 +10,7 @@ function findDiffFields(arr) {
   return [...field];
 }
 
-function countStudents(str) {
+module.exports = function countStudents(str) {
   fs.readFile(str, 'utf-8', (err, data) => {
     if (err) {
       console.log(err);
