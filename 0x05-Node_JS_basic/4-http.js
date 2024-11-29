@@ -4,10 +4,10 @@ const http = require('node:http');
 
 const app = http.createServer((req, res) => {
   const responseText = 'Hello Holberton School!';
-  response.setHeader('Content-Type', 'text/plain');
-  response.setHeader('Content-Length', responseText.length);
-  response.statusCode = 200;
-  response.write(Buffer.from(responseText));
+  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Length', responseText.length);
+  res.writeHead(200);
+  res.write(Buffer.from(responseText));
 }).listen(1245);
 
 module.exports = app;
