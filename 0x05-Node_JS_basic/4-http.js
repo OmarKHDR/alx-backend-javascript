@@ -8,6 +8,7 @@ const app = http.createServer((req, res) => {
   res.setHeader('Content-Length', responseText.length);
   res.writeHead(200);
   res.write(Buffer.from(responseText));
+  res.end()
 }).listen(1245);
 
 module.exports = app;
