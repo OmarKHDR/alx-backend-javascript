@@ -2,9 +2,7 @@
 
 const app = require('node:http');
 
-module.exports = app;
-
-app.createServer((req, res) => {
+module.exports = app.createServer((req, res) => {
   const responseText = 'Hello Holberton School!';
   response.setHeader('Content-Type', 'text/plain');
   response.setHeader('Content-Length', responseText.length);
