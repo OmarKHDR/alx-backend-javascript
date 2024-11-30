@@ -29,7 +29,7 @@ async function countStudents(str) {
       buffer.push(`Number of students in ${fields[i]}: ${num}. List: ${names}`);
     }
   } catch (err) {
-    console.log('Cannot load the database');
+    throw new Error('Cannot load the database');
   }
   return buffer.join('\n');
 }
@@ -45,7 +45,7 @@ const app = http.createServer(async (req, res) => {
     res.end('Hello Holberton School!');
   }
   if (req.url === '/students') {
-    const result = await countStudents('database.csv');
+    const result = await countStudents(process.argv[2]);
     res.writeHead(200);
     res.end(`This is the list of our students\n${result}\n`);
   }
