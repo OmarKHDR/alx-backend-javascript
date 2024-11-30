@@ -1,7 +1,5 @@
 #!/usr/bin/node
 
-const { count } = require('console');
-
 const fs = require('fs').promises;
 
 function findDiffFields(arr) {
@@ -14,7 +12,7 @@ function findDiffFields(arr) {
 
 async function countStudents(str) {
   try {
-    data = await fs.readFile(str, 'utf-8');
+    const data = await fs.readFile(str, 'utf-8');
     let rows = data.trim().split('\n');
     for (let i = 0; i < rows.length; i += 1) {
       rows[i] = rows[i].split(',');
@@ -29,8 +27,8 @@ async function countStudents(str) {
       const num = fieldSt.length;
       console.log(`Number of students in ${fields[i]}: ${num}. List: ${names}`);
     }
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.log('Cannot load the database');
   }
 }
 

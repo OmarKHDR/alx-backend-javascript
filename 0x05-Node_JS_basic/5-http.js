@@ -29,7 +29,7 @@ async function countStudents(str) {
       buffer.push(`Number of students in ${fields[i]}: ${num}. List: ${names}`);
     }
   } catch (err) {
-    console.log(err);
+    console.log('Cannot load the database');
   }
   return buffer.join('\n');
 }
