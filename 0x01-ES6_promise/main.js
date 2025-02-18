@@ -1,3 +1,4 @@
-import getResponseFromAPI from './0-promise';
+import getFullResponseFromAPI from './1-promise';
 
-console.log(getResponseFromAPI());
+console.log(getFullResponseFromAPI(true));
+console.log(getFullResponseFromAPI(false));
