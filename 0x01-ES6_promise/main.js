@@ -1,4 +1,7 @@
-import getFullResponseFromAPI from './1-promise';
+import handleResponseFromAPI from './2-then';
 
-console.log(getFullResponseFromAPI(true));
-console.log(getFullResponseFromAPI(false));
+const promise = Promise.resolve();
+console.log(handleResponseFromAPI(promise));
+
+const promise2 = Promise.reject();
+console.log(handleResponseFromAPI(promise2));
