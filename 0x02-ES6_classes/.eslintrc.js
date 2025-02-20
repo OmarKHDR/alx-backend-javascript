@@ -18,10 +18,10 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
+    'max-classes-per-file': 'off',
+    'no-underscore-dangle': 'off',
     'no-console': 'off',
     'no-shadow': 'off',
-    'no-underscore-dangle': 'off',
-    'quotes': ['error', 'douple', { 'allowTemplateLiterals': true, 'avoidEscape': true }],
     'no-restricted-syntax': [
       'error',
       'LabeledStatement',
@@ -35,4 +35,3 @@ module.exports = {
     }
   ]
 };
-
