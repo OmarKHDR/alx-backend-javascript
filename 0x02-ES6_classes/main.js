@@ -1,16 +1,5 @@
-import Building from './5-building.js';
+import ALXClass from "./8-hbtn_class.js";
 
-const b = new Building(100);
-console.log(b);
-
-class TestBuilding extends Building {
-
-}
-
-try {
-    new TestBuilding(200)
-	console.log(TestBuilding.sqft);
-}
-catch(err) {
-    console.log(err);
-}
+const hc = new ALXClass(12, "Mezzanine")
+console.log(Number(hc));
+console.log(String(hc));
